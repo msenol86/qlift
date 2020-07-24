@@ -6,16 +6,15 @@ import PackageDescription
 let package = Package(
     name: "Qlift",
     products: [
-        .executable(name: "qlift-uic", targets: ["qlift-uic"]),
         .library(name: "Qlift", targets: ["Qlift"]),
+    ],
+    dependencies: [
+        .package(url: "https://github.com/msenol86/cqlift", .branch("master")),
     ],
     targets: [
         .target(
             name: "Qlift"
             ),
-        .target(
-            name: "qlift-uic"
-            )
     ]
 )
 
